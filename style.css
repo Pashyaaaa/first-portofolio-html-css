@@ -1,0 +1,618 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  /* overflow-x: hidden; */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  height: 60px;
+  position: fixed;
+  width: 100%;
+  box-shadow: 5px 0px 5px black;
+  z-index: 99;
+}
+
+.navbar ul li {
+  padding: 15px;
+}
+
+.navbar ul li:hover {
+  background-color: #666;
+  border-radius: 30px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar .navigasi ul {
+  flex: 2;
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  font-size: 0.9em;
+}
+
+.navbar .title {
+  flex: 3;
+  text-align: center;
+  font-size: 2em;
+  color: #ffbb00;
+  font-family: "Pacifico", Impact, "Arial Narrow Bold", sans-serif;
+}
+
+.navbar .title span {
+  color: black;
+}
+
+.navbar .login ul {
+  flex: 1;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  list-style: none;
+}
+
+.navbar .login ul li a {
+  text-decoration: none;
+  list-style: none;
+  color: black;
+  padding: 5px;
+}
+
+.navbar .login ul li a i {
+  font-size: 1.3em;
+}
+
+/* hamburger menu */
+.btnMenu {
+  display: none;
+  height: 20px;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  margin: auto 20px;
+  border-radius: 50px;
+  z-index: 1;
+}
+
+.btnMenu span {
+  background-color: black;
+  width: 28px;
+  height: 3px;
+  transition: all 0.5s ease;
+}
+
+.btnMenu input {
+  position: absolute;
+  left: -6px;
+  top: -3px;
+  opacity: 0;
+  width: 40px;
+  height: 25px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.login-responsive {
+  display: none;
+  font-size: 40px;
+  padding: 10px;
+  color: black;
+}
+
+.login-responsive a {
+  color: #ffbb00;
+}
+
+.login-responsive a:hover {
+  color: black;
+}
+
+.banner {
+  width: 100%;
+  height: 450px;
+  padding-top: 100px;
+  padding-bottom: 70px;
+  background-image: url(img/landing-page.jpg);
+  background-size: cover;
+}
+
+.bContent {
+  height: 100%;
+}
+
+.bContent h2 {
+  text-align: center;
+  color: white;
+  font-size: 1.5em;
+}
+
+.bContent p {
+  color: #ffbb00;
+  text-align: center;
+}
+
+.bContent .cards {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  width: 100%;
+  color: white;
+  margin-top: 50px;
+  border-radius: 5px;
+}
+
+.bContent .cards .priority {
+  transform: scale(1.2);
+  font-size: 0.8em;
+}
+
+.bContent .cards .card {
+  width: 30%;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 1);
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.bContent .cards .card .header {
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  height: 200px;
+  background-size: cover;
+}
+
+.bContent .cards .card .header.x {
+  background-image: url(img/card3.jpg);
+}
+
+.bContent .cards .card .header.y {
+  background-image: url(img/card1.jpg);
+}
+
+.bContent .cards .card .header.z {
+  background-image: url(img/card2.jpg);
+}
+
+.bContent .cards .card span {
+  color: #ffbb00;
+}
+
+/* Wave effect */
+#waveAtas-container {
+  width: 100%;
+  margin-top: 50px;
+  background: white;
+  /* border: 3px solid black; */
+}
+
+#waveAtas:before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50% 0% 50%;
+  width: 70%;
+  height: 80px;
+  background-color: #fff;
+  left: 0px;
+  top: -50px;
+}
+#waveAtas:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 50% 0% 50% 150%;
+  width: 50%;
+  height: 70px;
+  background-color: #ffbb00;
+  right: 0;
+  top: -20px;
+}
+
+#waveAtas,
+#waveBawah {
+  position: relative;
+  height: 70px;
+  background: #ffbb00;
+}
+
+#waveBawah {
+  margin-bottom: 50px;
+}
+
+#waveBawah:before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 0% 50% 50% 100%;
+  width: 70%;
+  height: 80px;
+  background-color: #fff;
+  right: 0px;
+  top: 40px;
+}
+#waveBawah:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 50% 100% 50% 0%;
+  width: 50%;
+  height: 70px;
+  background-color: #ffbb00;
+  left: 0;
+  top: 20px;
+}
+
+/* About */
+#about {
+  padding-top: 6rem;
+}
+
+.about {
+  background-color: #ffbb00;
+}
+
+.about .items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.about .items h2 {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about .items .item {
+  font-size: 0.9em;
+  padding: 15px;
+  text-align: center;
+  border: 2px solid rgba(131, 131, 131, 0.6);
+  margin: 10px;
+  background-color: white;
+}
+
+.about .items .item1 p,
+.about .items .item2 p,
+.about .items .item3 p,
+.about .items .item4 p,
+.about .items .item5 p,
+.about .items .item6 p {
+  padding-top: 10px;
+}
+
+.about .items .item1 i {
+  font-size: 2.5em;
+  color: blue;
+}
+
+.about .items .item2 i {
+  font-size: 2.5em;
+  color: green;
+}
+
+.about .items .item3 i {
+  font-size: 2.5em;
+  color: red;
+}
+
+.about .items .item4 i {
+  font-size: 2.5em;
+  color: yellow;
+}
+
+.about .items .item5 i {
+  font-size: 2.5em;
+  color: orange;
+}
+
+.about .items .item6 i {
+  font-size: 2.5em;
+  color: purple;
+}
+
+.gallery {
+  width: 80%;
+  height: auto;
+  margin: auto;
+  padding-top: 6rem;
+  margin-bottom: 100px;
+}
+
+.gallery h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.gall1 {
+  height: 200px;
+  grid-area: header;
+  background-image: url(img/aerial-view-glen-etive-winter-near-glencoe-argyll-region-highlands-scotland-s.jpg);
+  background-size: cover;
+}
+.gall2 {
+  grid-area: menu;
+  background-image: url(img/japan-city-night-with-empty-street.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.gall3 {
+  height: 200px;
+  grid-area: main;
+  background-image: url(img/misty-park.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.gall4 {
+  height: 200px;
+  grid-area: footer;
+  background-image: url(img/leaf-nature-meet-water-creating-abstract-background-generative-ai.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.gContent {
+  display: grid;
+  grid-template-areas:
+    "header header header header header header"
+    "menu main main main main main"
+    "menu footer footer footer footer footer";
+  gap: 10px;
+  padding: 10px;
+}
+
+.contact {
+  padding-top: 6rem;
+  margin: auto;
+}
+
+.contact h2 {
+  text-align: center;
+}
+
+.contact p {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 1em;
+}
+
+.ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.form li {
+  margin-top: 1em;
+}
+
+.ul li label {
+  /* Uniform size & alignment */
+  display: inline-block;
+  width: 90px;
+}
+
+.ul li input,
+.ul li textarea {
+  font: 1em sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #999;
+}
+
+.ul li input:focus,
+.ul li textarea:focus {
+  border-color: #000;
+}
+
+.ul li textarea {
+  height: 5em;
+}
+
+.b {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 24px;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
+    rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
+  box-sizing: border-box;
+  color: #3c4043;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  font-size: 14px;
+  height: 48px;
+  justify-content: center;
+  max-width: 100%;
+  padding: 2px 24px;
+  position: relative;
+  text-align: center;
+  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 15ms linear 30ms, transform 270ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+}
+
+.b:hover {
+  background: #f6f9fe;
+  color: #ffbb00;
+}
+
+.b:active {
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%),
+    0 8px 12px 6px rgb(60 64 67 / 15%);
+  outline: none;
+}
+
+.b:focus {
+  outline: none;
+  border: 2px solid #ffbb00;
+}
+
+.footer {
+  margin-top: 100px;
+  padding: 20px;
+  color: #fff;
+  height: 200px;
+  background-color: #3c4043;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.sosmed h4 {
+  margin-bottom: 10px;
+}
+
+.sosmed ul li {
+  list-style: none;
+}
+
+.sosmed li a {
+  color: #fff;
+}
+
+.logoBottom h2 {
+  font-family: "Pacifico", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif;
+  text-shadow: 2px 2px #000;
+}
+/* animasi */
+.btnMenu span:nth-child(2) {
+  transform-origin: 0 0;
+}
+
+.btnMenu span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+
+.btnMenu input:checked ~ span {
+  background-color: white;
+}
+
+.btnMenu input:checked ~ span:nth-child(2) {
+  transform: rotate(45deg) translate(0, -1px);
+}
+
+.btnMenu input:checked ~ span:nth-child(3) {
+  transform: scale(0);
+  opacity: 0;
+}
+
+.btnMenu input:checked ~ span:nth-child(4) {
+  transform: rotate(-45deg) translate(-1px, 0);
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 900px) {
+  .bContent .cards .card {
+    display: none;
+  }
+
+  .bContent .cards .card.priority {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+  }
+}
+
+@media (min-width: 851px) {
+  /* .navbar .title {
+    padding-right: 90px;
+  } */
+
+  .navbar .login ul {
+    gap: 50px;
+  }
+}
+
+@media (max-width: 850px) {
+  .navigasi .title {
+    padding-right: 0px;
+  }
+
+  .btnMenu {
+    display: flex;
+  }
+
+  .login-responsive {
+    display: inline;
+  }
+
+  .navbar .navigasi {
+    opacity: 0;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: center;
+    transform: translateX(-100%);
+    transition: all 0.5s ease;
+  }
+
+  .navbar .navigasi ul {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .navbar .navigasi ul li {
+    height: 30px;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .navbar .navigasi ul li a {
+    font-size: 1.5em;
+    padding: 0;
+    color: white;
+  }
+
+  .navbar .login {
+    display: none;
+  }
+
+  .navbar .navigasi.slide {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 700px) {
+  .sosmed {
+    flex: 1;
+  }
+}
+
+@media (max-width: 600px) {
+}
